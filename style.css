@@ -229,6 +229,8 @@ body {
 .link-btn:nth-child(3) { --i: 2 }
 .link-btn:nth-child(4) { --i: 3 }
 .link-btn:nth-child(5) { --i: 4 }
+.link-btn:nth-child(6) { --i: 5 }
+.link-btn:nth-child(7) { --i: 6 }
 
 .link-btn:hover {
   transform: translate(-3px,-3px);
@@ -277,6 +279,32 @@ body {
 }
 @keyframes rippleAnim {
   to { transform: scale(4); opacity: 0; }
+}
+
+/* Soon Badge */
+.link-btn--soon {
+  opacity: .6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.link-btn--soon:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+.soon-badge {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  background: var(--yellow);
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  padding: .15rem .5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .4; }
 }
 
 /* ──────────────────────────────────────────
